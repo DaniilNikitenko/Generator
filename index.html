@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+	<title>Генератор</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script defer src="js/script.js"></script>
+</head>
+
+<body>
+	<h1 class="title">Генератор номера экзаменационного билета</h1>
+	<div class="block">
+		<form class="form" action="#" method="post">
+			<div class="block-input">
+				<label for="first_name">Имя</label>
+				<input class="input" type="text" id="first_name" placeholder="Имя" required />
+			</div>
+			<div class="block-input">
+				<label for="last_name">Фамилия</label>
+				<input class="input" type="text" id="last_name" placeholder="Фамилия" required />
+			</div>
+			<div class="block-input">
+				<label for="group_number">Группа</label>
+				<input class="input" type="text" id="group_number" placeholder="Группа" required />
+			</div>
+			<div class="block-input">
+				<label class="num__tickets" for="num_tickets">Введите количество экзаменационных билетов:</label>
+				<input class="input" type="number" id="num_tickets" name="num_tickets" min="1">
+			</div>
+			<button class="button" type="button" onclick="generateTicket()">Сгенерировать номер билета</button>
+		</form>
+		<p class="text text-big" id="ticket_display"></p>
+		<p class="text" id="remaining_tickets"></p>
+		<table id="table">
+			<tr>
+			  <th>Имя</th>
+			  <th>Фамилия</th>
+			  <th>Группа</th>
+			  <th>Дата</th>
+			  <th>Номер билета</th>
+			</tr>
+		  </table>
+		  
+	</div>
+</body>
+
+</html>
